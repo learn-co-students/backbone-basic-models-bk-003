@@ -22,7 +22,7 @@ Backbone.js is more like Sinatra than Rails in the sense that we need to determi
 Using Backbone means we're going to create directories for models, collections and views. Therefore having a namespace for our app to keep them organized is a good practice.
 > A namespace is an object-oriented concept which allows for organization of variables, functions, and other elements of a program. A namespace encapsulates code such that to access that code, you must first reference the namespace to which you are referring. The global namespace is one such default namespace -- all global variables are considered to be in the "global namespace." Programmers can create other namespaces, thus organizing code and reducing pollution of the global namespace.
 
-We can do that by creating an app.js in the root of our application directory.The first test in this lab requires you to write the relevant code that sets up a namespace this lab; read the spec file to get a sense of how to define `app`.
+We can do that by creating an app.js in the root of our application directory.The first test in this lab requires you to write the code require to set up a namespace this lab; read both requires.yml and spec/app.spec.js files to get a sense of what you need to do to define `app` and get the first test to pass.
 
 ##### Model(s) in Backbone.js
 Backbone.js has a base class called `Model` that serves as the data layer in Backbone.

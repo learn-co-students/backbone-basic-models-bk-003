@@ -7,6 +7,6 @@ javascripts:
     - public/js/models/user.js
     - public/js/app.js
   specs:
-    - spec/models/user.spec.js
     - spec/app.spec.js
+    - spec/models/user.spec.js
     - spec/jasmine-jquery.js
