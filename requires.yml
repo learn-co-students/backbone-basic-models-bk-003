@@ -1,0 +1,12 @@
+# A list of javascript files required for the project, in dependency order
+javascripts:
+  files:
+    - public/js/lib/backbone.js
+    - public/js/lib/jquery.min.js
+    - public/js/lib/underscore.js
+    - public/js/models/user.js
+    - public/js/app.js
+  specs:
+    - spec/models/user.spec.js
+    - spec/app.spec.js
+    - spec/jasmine-jquery.js
