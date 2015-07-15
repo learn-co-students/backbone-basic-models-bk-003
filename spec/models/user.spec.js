@@ -6,19 +6,22 @@ describe("User Model", function() {
 
   // setup and instantiate the custom backbone model
   beforeEach(function() {
-    user = new UserModel({
-      name: ' ',
+    user = new User({
+      fullname: ' ',
       isAdmin: false,
       birthday: 1988
     });
   });
 
   it("should exist", function() {
-    expect(UserModel).toBeDefined();
+    expect(User).toBeDefined();
   });
 
-  it('can have default properties such as name and birthday', function() {
+  it('can have default properties such as fullname and birthday', function() {
     expect(user.defaults).toBeDefined();
+    expect(user.defaults.fullname).toBeDefined();
+    expect(user.defaults.isAdmin).toBeDefined();
+    expect(user.defaults.birthday).toBeDefined();
   });
 
   it('has a custom method called calculateAge', function() {
@@ -29,5 +32,10 @@ describe("User Model", function() {
     user.calculateAge();
     expect(user.get('age')).toBeDefined();
     expect(user.get('age')).toEqual((new Date().getFullYear()) - user.get('birthday'));
+  });
+
+  it('sets isAdmin default to true after makeAdmin is called', function() {
+    user.makeAdmin();
+    expect(user.get('isAdmin')).toEqual(true);
   });
 });
