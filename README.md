@@ -12,7 +12,7 @@
 
 # Overview of Backbone.js
 This lab begins with a brief discussion of Backbone.js and the responsibilities of its Model base class.
-Backbone.js is a javascript library/framework that makes use of MV* patterns to construct easily maintable object oriented single web-page applications.
+Backbone.js is a javascript library/framework that makes use of MV* patterns to construct easily maintainable object oriented single web-page applications.
 
 > _Backbone.js gives structure to web applications by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing API over a RESTful JSON interface_**<sup>[1](http://backbonejs.org/)</sup>**.
 
@@ -46,7 +46,7 @@ var Book = Backbone.Model.extend({
 The second test in this lab requires you to extend Backbone's base Model class to build your own model.
 
 
-As in rails, a Backbone model class typically has attibutes that we are interested in setting, retriving, and manipulating. Backbone.js, being a client-side library, isn't directly connected to a database therefore its `Model class` serves as in memory (client-side/browser) representations of the data structures needed to build the **User Interface (UI)** of a web application.
+As in rails, a Backbone model class typically has attributes that we are interested in setting, retrieving, and manipulating. Backbone.js, being a client-side library, isn't directly connected to a database therefore its `Model class` serves as in memory (client-side/browser) representations of the data structures needed to build the **User Interface (UI)** of a web application.
 
 Let's return to our example rails _Book Model_ and assume that it has an attribute `authorName` and a corresponding value `"J.K Rowling"`. To represent this scheme in the application UI, we add default values to Backbone.js Book model created above:
 ```javascript
