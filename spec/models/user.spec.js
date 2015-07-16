@@ -19,9 +19,9 @@ describe("User Model", function() {
 
   it('can have default properties such as fullname and birthday', function() {
     expect(user.defaults).toBeDefined();
-    expect(user.defaults.fullname).toBeDefined();
-    expect(user.defaults.isAdmin).toBeDefined();
-    expect(user.defaults.birthday).toBeDefined();
+    expect(user.get('fullname')).toBeDefined();
+    expect(user.get('isAdmin')).toEqual(false)
+    expect(user.get('birthday')).toEqual(1988)
   });
 
   it('has a custom method called calculateAge', function() {
