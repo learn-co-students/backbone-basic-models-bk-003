@@ -7,7 +7,8 @@ describe("User Model", function() {
   // setup and instantiate the custom backbone model
   beforeEach(function() {
     user = new User({
-      fullname: ' ',
+      firstName: ' ',
+      lastName: ' ',
       isAdmin: false,
       birthday: 1988
     });
@@ -17,10 +18,11 @@ describe("User Model", function() {
     expect(User).toBeDefined();
   });
 
-  it('can have default properties such as fullname and birthday', function() {
+  it('has default properties for firstName, lastName, isAdmin and birthday', function() {
     expect(user.defaults).toBeDefined();
-    expect(user.get('fullname')).toBeDefined();
-    expect(user.get('isAdmin')).toEqual(false)
+    expect(user.get('firstName')).toBeDefined();
+    expect(user.get('lastName')).toBeDefined();
+    expect(user.get('isAdmin')).toEqual(false);
     expect(user.get('birthday')).toEqual(1988)
   });
 
