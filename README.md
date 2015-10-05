@@ -9,7 +9,6 @@
 2. Write the code necessary to get the failing tests to pass
 3. As you create directories/flies to hold your code, aim to get write code that passes passes failing test in sequential order
 
-
 # Overview of Backbone.js
 This lab begins with a brief discussion of Backbone.js and the responsibilities of its Model base class.
 Backbone.js is a javascript library/framework that makes use of MV* patterns to construct easily maintable object oriented single web-page applications.
@@ -22,7 +21,21 @@ Backbone.js is more like Sinatra than Rails in the sense that we need to determi
 Using Backbone means we're going to create directories for models, collections and views. Therefore having a namespace for our app to keep them organized is a good practice.
 > A namespace is an object-oriented concept which allows for organization of variables, functions, and other elements of a program. A namespace encapsulates code such that to access that code, you must first reference the namespace to which you are referring. The global namespace is one such default namespace -- all global variables are considered to be in the "global namespace." Programmers can create other namespaces, thus organizing code and reducing pollution of the global namespace.
 
-We can do that by creating an app.js in the root of our application directory.The first test in this lab requires you to write the code require to set up a namespace this lab; read both requires.yml and spec/app.spec.js files to get a sense of what you need to do to define `app` and get the first test to pass.
+
+We can do that by creating an app.js in the root of our application directory. The first test in this lab requires you to set up a namespace. Read both `requires.yml` and `spec/app.spec.js` files to get a sense of what you need to do to define `app` and get the first test to pass.
+
+The complexity of namespaces can vary. This namespace for app also sets up sub namespaces for models, collections, and views. 
+
+```javascript
+app = {   
+	Models: {},
+	Collections: {},
+	Views: {}
+};
+```
+Namespaces can also be very simple. The namespace `app = {}` just sets up the app namespace and lets the models 
+#####Requires.yml
+The `requires.yml` file will be in the root directory of your backbone.js labs. This file is similar to the `environment.rb` file in rails in sinatra in that it lists all the dependencies for your project, however it differs in several important ways. First, the file must be [valid YAML](http://yaml.org/), and second, the requirements must be made in requirement order. For example jquery is required before underscore in `requires.yml` because it underscore needs jquery to run and must be brought into the application environment before underscore.
 
 ##### Model(s) in Backbone.js
 Backbone.js has a base class called `Model` that serves as the data layer in Backbone.
@@ -65,3 +78,4 @@ Now that we have worked through the basics, try to get add a custom method `calc
 
 # Resources
 + [Namespacing in JavaScript](http://addyosmani.com/blog/essential-js-namespacing/)
++ [Ruby Namespaces - Stack Overflow](http://stackoverflow.com/questions/991036/what-is-a-namespace)
