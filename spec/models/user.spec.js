@@ -2,8 +2,22 @@
 
 describe("User Model", function() {
 
-  var user;
+  it("should exist", function() {
+    expect(User).toBeDefined();
+  });
 
+  var defaultUser;
+
+  defaultUser = new User({})
+
+  it('has default properties for firstName, lastName, isAdmin and birthday', function() {
+    expect(user.defaults).toBeDefined();
+    expect(user.get('fullname')).toBeDefined();
+    expect(user.get('isAdmin')).toEqual(false);
+    expect(user.get('birthday')).toEqual(1988)
+  });
+
+  var user;
   // setup and instantiate the custom backbone model
   beforeEach(function() {
     user = new User({
@@ -16,14 +30,6 @@ describe("User Model", function() {
 
   it("should exist", function() {
     expect(User).toBeDefined();
-  });
-
-  it('has default properties for firstName, lastName, isAdmin and birthday', function() {
-    expect(user.defaults).toBeDefined();
-    expect(user.get('firstName')).toBe(" ");
-    expect(user.get('lastName')).toBeDefined();
-    expect(user.get('isAdmin')).toEqual(false);
-    expect(user.get('birthday')).toEqual(1988)
   });
 
   it('has a custom method called calculateAge', function() {
