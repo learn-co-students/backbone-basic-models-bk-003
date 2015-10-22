@@ -40,7 +40,7 @@ app.Models = {}
 app.Collections = {}
 app.Views = {}
 ```
-This syntax lets you define your Models, Collections, and Views wherever you want to, rather than in the same locatoin you define your app.
+This syntax lets you define your Models, Collections, and Views wherever you want to, rather than in the same location you define your app.
 
 #####Requires.yml
 The `requires.yml` file will be in the root directory of your backbone.js labs. This file is similar to the `environment.rb` file in rails in sinatra in that it lists all the dependencies for your project, however it differs in several important ways. First, the file must be [valid YAML](http://yaml.org/), and second, the requirements must be made in requirement order. For example jquery is required before underscore in `requires.yml` because it underscore needs jquery to run and must be brought into the application environment before underscore.
