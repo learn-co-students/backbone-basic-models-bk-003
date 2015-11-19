@@ -1,4 +1,4 @@
-# Introduction to Backbone.js: Models
+ # Introduction to Backbone.js: Models
 
 # Objectives
 1. Understand the basics of Backbone Models
