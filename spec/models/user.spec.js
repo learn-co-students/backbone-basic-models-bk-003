@@ -11,10 +11,10 @@ describe("User Model", function() {
   defaultUser = new User({})
 
   it('has default properties for firstName, lastName, isAdmin and birthday', function() {
-    expect(user.defaults).toBeDefined();
-    expect(user.get('fullname')).toBeDefined();
-    expect(user.get('isAdmin')).toEqual(false);
-    expect(user.get('birthday')).toEqual(1988)
+    expect(defaultUser.defaults).toBeDefined();
+    expect(defaultUser.get('firstName')).toBeDefined();
+    expect(defaultUser.get('isAdmin')).toEqual(false);
+    expect(defaultUser.get('birthday')).toEqual(1988)
   });
 
   var user;
