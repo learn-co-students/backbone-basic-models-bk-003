@@ -1,1 +1,1 @@
-//  Extend the Backbone.Model prototype to build your own model here
+var User = Backbone.Model.extend({   defaults: function (){     return {       fullname: "Chuck Norris",      isAdmin: false,      birthday:  1000    };},   calculateAge: function(){    var current_date = new Date().getFullYear();    this.set({age: current_date - this.get("birthday")});  },  makeAdmin: function(){    this.set({isAdmin:true});  }});
